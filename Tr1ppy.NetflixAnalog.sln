@@ -1,9 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.13
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Service", "Tr1ppy.NetflixAnalog\Tr1ppy.NetflixAnalog.Service.csproj", "{52A014B8-324E-41AC-A2B0-D9D036FBA688}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.AutoFac", "..\Tr1ppy.Packages\Tr1ppy.Autofac\Tr1ppy.AutoFac.csproj", "{FCACF7BF-499B-3F59-8E32-DD8CB5058245}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.Logging", "..\Tr1ppy.Packages\Tr1ppy.Logging\Tr1ppy.Logging.csproj", "{B89238ED-8408-C55B-B4A4-DC01691B9611}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7693E202-E5CA-4EA3-A47E-99FF04082092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Service", "src\Tr1ppy.NetflixAnalog.Service\Tr1ppy.NetflixAnalog.Service.csproj", "{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{E3CBE905-A3CA-4B68-814C-6111BF27D1D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{860C520E-0A42-4F0E-84C4-6B6B71917F58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.Core", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.Core\Tr1ppy.NetflixAnalog.Security.Authentication.Core.csproj", "{FB7FA1D3-6355-4070-93BD-84102993C2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.Cryptography", "..\Tr1ppy.Packages\Tr1ppy.Cryptography\Tr1ppy.Cryptography.csproj", "{E5DE46DC-0633-3647-CB78-312CE27589E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +27,39 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{52A014B8-324E-41AC-A2B0-D9D036FBA688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52A014B8-324E-41AC-A2B0-D9D036FBA688}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52A014B8-324E-41AC-A2B0-D9D036FBA688}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52A014B8-324E-41AC-A2B0-D9D036FBA688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FCACF7BF-499B-3F59-8E32-DD8CB5058245} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
+		{B89238ED-8408-C55B-B4A4-DC01691B9611} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
+		{E3CBE905-A3CA-4B68-814C-6111BF27D1D9} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
+		{860C520E-0A42-4F0E-84C4-6B6B71917F58} = {E3CBE905-A3CA-4B68-814C-6111BF27D1D9}
+		{FB7FA1D3-6355-4070-93BD-84102993C2C9} = {860C520E-0A42-4F0E-84C4-6B6B71917F58}
+		{E5DE46DC-0633-3647-CB78-312CE27589E4} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EB9ED5C-FD54-4706-A174-1E370B8F5C38}

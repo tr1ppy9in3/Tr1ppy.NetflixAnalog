@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.AutoFac", "..\Tr1ppy.Packages\Tr1ppy.Autofac\Tr1ppy.AutoFac.csproj", "{FCACF7BF-499B-3F59-8E32-DD8CB5058245}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.Logging", "..\Tr1ppy.Packages\Tr1ppy.Logging\Tr1ppy.Logging.csproj", "{B89238ED-8408-C55B-B4A4-DC01691B9611}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7693E202-E5CA-4EA3-A47E-99FF04082092}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Service", "src\Tr1ppy.NetflixAnalog.Service\Tr1ppy.NetflixAnalog.Service.csproj", "{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}"
@@ -19,7 +13,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.Core", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.Core\Tr1ppy.NetflixAnalog.Security.Authentication.Core.csproj", "{FB7FA1D3-6355-4070-93BD-84102993C2C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.Cryptography", "..\Tr1ppy.Packages\Tr1ppy.Cryptography\Tr1ppy.Cryptography.csproj", "{E5DE46DC-0633-3647-CB78-312CE27589E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.Contracts", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.Contracts\Tr1ppy.NetflixAnalog.Security.Authentication.Contracts.csproj", "{593AB39A-8AA4-4931-863F-BF3F7DF3F32D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.Infrastructure.DataAccess", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.DataAccess\Tr1ppy.NetflixAnalog.Security.Authentication.Infrastructure.DataAccess.csproj", "{BA5A675D-5A3E-4680-B0C9-EE46650E861E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authorization", "Authorization", "{C704C549-0049-45D6-871B-2144B38A06C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authorization.Contracts", "src\Security\Authorization\Tr1ppy.NetflixAnalog.Security.Authorization.Contracts\Tr1ppy.NetflixAnalog.Security.Authorization.Contracts.csproj", "{189749EB-7B22-400C-AE1B-9F46980346A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authorization.Integration", "src\Security\Authorization\Tr1ppy.NetflixAnalog.Security.Authorization.Integration\Tr1ppy.NetflixAnalog.Security.Authorization.Integration.csproj", "{6C94A121-9B8E-4631-9F3E-E821CEE66EFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.Integration", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.Integration\Tr1ppy.NetflixAnalog.Security.Authentication.Integration.csproj", "{C04FDAED-7B7D-46EE-A7A9-5F5DEEF0A7BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.UseCases", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.UseCases\Tr1ppy.NetflixAnalog.Security.Authentication.UseCases.csproj", "{EA02C898-4DFD-F3DF-06F0-6704C1D82C78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Security.Authentication.Infrastructure", "src\Security\Authentication\Tr1ppy.NetflixAnalog.Security.Authentication.Infrastructure\Tr1ppy.NetflixAnalog.Security.Authentication.Infrastructure.csproj", "{67AD2297-CEA9-ED2A-CC2D-1B9D8A07F159}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Articles", "Articles", "{9B3B2247-C13A-4802-9628-36EC670C0322}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tr1ppy.NetflixAnalog.Articles.Core", "src\Articles\Tr1ppy.NetflixAnalog.Articles.Core\Tr1ppy.NetflixAnalog.Articles.Core.csproj", "{AA83E624-2A29-473E-A4D1-6397D56A23A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,14 +41,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCACF7BF-499B-3F59-8E32-DD8CB5058245}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B89238ED-8408-C55B-B4A4-DC01691B9611}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,23 +49,58 @@ Global
 		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB7FA1D3-6355-4070-93BD-84102993C2C9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5DE46DC-0633-3647-CB78-312CE27589E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{593AB39A-8AA4-4931-863F-BF3F7DF3F32D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{593AB39A-8AA4-4931-863F-BF3F7DF3F32D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{593AB39A-8AA4-4931-863F-BF3F7DF3F32D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{593AB39A-8AA4-4931-863F-BF3F7DF3F32D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5A675D-5A3E-4680-B0C9-EE46650E861E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5A675D-5A3E-4680-B0C9-EE46650E861E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5A675D-5A3E-4680-B0C9-EE46650E861E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5A675D-5A3E-4680-B0C9-EE46650E861E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189749EB-7B22-400C-AE1B-9F46980346A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189749EB-7B22-400C-AE1B-9F46980346A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189749EB-7B22-400C-AE1B-9F46980346A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189749EB-7B22-400C-AE1B-9F46980346A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C94A121-9B8E-4631-9F3E-E821CEE66EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C94A121-9B8E-4631-9F3E-E821CEE66EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C94A121-9B8E-4631-9F3E-E821CEE66EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C94A121-9B8E-4631-9F3E-E821CEE66EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04FDAED-7B7D-46EE-A7A9-5F5DEEF0A7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04FDAED-7B7D-46EE-A7A9-5F5DEEF0A7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04FDAED-7B7D-46EE-A7A9-5F5DEEF0A7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04FDAED-7B7D-46EE-A7A9-5F5DEEF0A7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA02C898-4DFD-F3DF-06F0-6704C1D82C78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA02C898-4DFD-F3DF-06F0-6704C1D82C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA02C898-4DFD-F3DF-06F0-6704C1D82C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA02C898-4DFD-F3DF-06F0-6704C1D82C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AD2297-CEA9-ED2A-CC2D-1B9D8A07F159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AD2297-CEA9-ED2A-CC2D-1B9D8A07F159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AD2297-CEA9-ED2A-CC2D-1B9D8A07F159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AD2297-CEA9-ED2A-CC2D-1B9D8A07F159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA83E624-2A29-473E-A4D1-6397D56A23A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA83E624-2A29-473E-A4D1-6397D56A23A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA83E624-2A29-473E-A4D1-6397D56A23A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA83E624-2A29-473E-A4D1-6397D56A23A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{FCACF7BF-499B-3F59-8E32-DD8CB5058245} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
-		{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
-		{B89238ED-8408-C55B-B4A4-DC01691B9611} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
 		{E298CC12-9F6D-A787-A77E-A08A7E98F6CF} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
 		{E3CBE905-A3CA-4B68-814C-6111BF27D1D9} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
 		{860C520E-0A42-4F0E-84C4-6B6B71917F58} = {E3CBE905-A3CA-4B68-814C-6111BF27D1D9}
 		{FB7FA1D3-6355-4070-93BD-84102993C2C9} = {860C520E-0A42-4F0E-84C4-6B6B71917F58}
-		{E5DE46DC-0633-3647-CB78-312CE27589E4} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{593AB39A-8AA4-4931-863F-BF3F7DF3F32D} = {860C520E-0A42-4F0E-84C4-6B6B71917F58}
+		{BA5A675D-5A3E-4680-B0C9-EE46650E861E} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{C704C549-0049-45D6-871B-2144B38A06C3} = {E3CBE905-A3CA-4B68-814C-6111BF27D1D9}
+		{189749EB-7B22-400C-AE1B-9F46980346A8} = {C704C549-0049-45D6-871B-2144B38A06C3}
+		{6C94A121-9B8E-4631-9F3E-E821CEE66EFF} = {C704C549-0049-45D6-871B-2144B38A06C3}
+		{C04FDAED-7B7D-46EE-A7A9-5F5DEEF0A7BC} = {860C520E-0A42-4F0E-84C4-6B6B71917F58}
+		{EA02C898-4DFD-F3DF-06F0-6704C1D82C78} = {860C520E-0A42-4F0E-84C4-6B6B71917F58}
+		{67AD2297-CEA9-ED2A-CC2D-1B9D8A07F159} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8} = {860C520E-0A42-4F0E-84C4-6B6B71917F58}
+		{9B3B2247-C13A-4802-9628-36EC670C0322} = {7693E202-E5CA-4EA3-A47E-99FF04082092}
+		{AA83E624-2A29-473E-A4D1-6397D56A23A1} = {9B3B2247-C13A-4802-9628-36EC670C0322}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EB9ED5C-FD54-4706-A174-1E370B8F5C38}

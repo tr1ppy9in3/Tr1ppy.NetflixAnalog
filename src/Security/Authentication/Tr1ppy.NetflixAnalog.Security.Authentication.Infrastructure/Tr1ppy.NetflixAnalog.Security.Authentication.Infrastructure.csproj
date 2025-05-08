@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.9.0" />
+    <PackageReference Include="Tr1ppy.Autoregistration" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tr1ppy.NetflixAnalog.Security.Authentication.Contracts\Tr1ppy.NetflixAnalog.Security.Authentication.Contracts.csproj" />
+    <ProjectReference Include="..\Tr1ppy.NetflixAnalog.Security.Authentication.UseCases\Tr1ppy.NetflixAnalog.Security.Authentication.UseCases.csproj" />
+  </ItemGroup>
+
+</Project>

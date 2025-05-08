@@ -1,7 +1,9 @@
 using System.Reflection;
+using System.Security.Cryptography;
 
-using Microsoft.Extensions.Diagnostics.Metrics;
+using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.Diagnostics.Metrics;
 
 using NLog;
 using NLog.Extensions.Logging;
@@ -13,13 +15,18 @@ using Autofac.Extensions.DependencyInjection;
 
 namespace Tr1ppy.NetflixAnalog;
 
-using Tr1ppy.Logging.Extensions;
+using Tr1ppy.Configuration.Extensions;
+using Tr1ppy.Cryptography.Password.Integration.DependencyInjection;
+
+using Security.Authentication.Integration;
+using Security.Authorization.Integration;
 
 using Service.Lexems;
 using Service.Resourses;
 using Service.Extensions;
-using Tr1ppy.Cryptography.Password.Integration;
-using System.Security.Cryptography;
+
+using Logging.Extensions;
+using Configuration;
 
 public static class Program
 {
@@ -36,8 +43,10 @@ public static class Program
         WebApplication app = builder.Build();
 
         using var scope = app.Services.CreateScope();
+
         var localizer = scope.ServiceProvider.GetRequiredService<IStringLocalizer<SharedResourse>>();
         var logger = scope.ServiceProvider.GetRequiredService<ILogger<SharedResourse>>();
+        var appVersion = scope.ServiceProvider.GetRequiredService<IOptions<AppVersion>>().Value;
 
         try
         {
@@ -45,7 +54,7 @@ public static class Program
             (
                 localizer: localizer, 
                 key: LoggingLexems.StartupTimeMessage, 
-                args: [startupDateTime]
+                args: [startupDateTime, appVersion]
             );
 
             ConfigureApp(app);
@@ -86,7 +95,9 @@ public static class Program
 
         app.MapGet(string.Empty, async ctx => await ctx.Response.WriteAsync(appName));
 
+        app.UseAuthentication();
         app.UseAuthorization();
+
         app.MapControllers();
     }
 
@@ -151,13 +162,21 @@ public static class Program
         services.AddControllersWithCors();
         services.AddSwaggerDocumentation();
 
+        services.AddHttpContextAccessor();
+        services.AddDefaultAuthorization();
+        services.AddDefaultAunthentication(configuration);
+        services.LoadAppVersionFromAssemblyAttributes();
+
         IConfigurationSection securitySection = configuration.GetSection("Security");
+        IConfigurationSection hashSection = securitySection.GetSection("HashSettings");
+
+
         services.AddPasswordCryptography(options =>
         {
-            options.SaltSize = securitySection.GetValue<int>("SaltSize");
-            options.HashSize = securitySection.GetValue<int>("HashSize");
-            options.HashAlgorithm = new HashAlgorithmName(securitySection.GetValue<string>("HashAlgorithm"));
-            options.IterationsCount = securitySection.GetValue<int>("HashIterationsCount");
+            options.SaltSize = hashSection.GetValue<int>("SaltSize");
+            options.HashSize = hashSection.GetValue<int>("HashSize");
+            options.HashAlgorithm = new HashAlgorithmName(hashSection.GetValue<string>("HashAlgorithm"));
+            options.IterationsCount = hashSection.GetValue<int>("HashIterationsCount");
         });
 
         _logger.Debug("Succesfully configured services!");
